@@ -1,0 +1,39 @@
+package chap04;
+
+public class SwitchExam4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String grade = "?";
+		
+		switch (grade) {
+	
+		case "플래티넘":
+			System.out.println(grade + " 회원비 지급 : 1000만원");
+			break;
+		
+		case "골드":
+			System.out.println(grade + " 회원비 지급 : 500만원");
+			break;	
+		
+		case "실버":
+			System.out.println(grade + " 회원비 지급 : 250만원");
+			break;
+		
+		case "브론즈":
+			System.out.println(grade + " 회원비 지급 : 100만원");
+			break;
+			
+		default :
+			System.out.println("Unknown 은 없습니다. ");
+			break;
+			
+			
+		}	//스위치문 종료
+		
+
+}	//메서드 종료
+	
+}	//클래스 종료

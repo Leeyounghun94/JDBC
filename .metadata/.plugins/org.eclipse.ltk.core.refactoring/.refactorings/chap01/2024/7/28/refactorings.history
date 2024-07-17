@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;chap13.asdf&apos; to &apos;Split&apos;&#x0D;&#x0A;- Original project: &apos;chap01&apos;&#x0D;&#x0A;- Original element: &apos;chap13.asdf&apos;&#x0D;&#x0A;- Renamed element: &apos;chap13.Split&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;asdf&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;chap13{asdf.java[asdf" matchStrategy="1" name="Split" qualified="false" references="true" similarDeclarations="false" stamp="1720425181248" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,7 @@
+package chap06.Account;
+
+public class accountList {
+
+	
+	public static void list(Account[] accountArrays) {
+}

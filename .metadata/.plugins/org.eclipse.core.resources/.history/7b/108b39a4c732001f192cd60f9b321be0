@@ -1,0 +1,24 @@
+package chap06.Account;
+
+public class accountList {
+
+	
+	public static void list(Account[] accountArrays) {
+		
+		System.out.println("◈◈◈◈◈◈◈◈◈계좌 목록 리스트 입니다.◈◈◈◈◈◈◈◈ ");
+		for(int i=0; i < accountArrays.length; i++) {
+			Account account = accountArrays[i];
+			
+			if(account !=null) {
+				System.out.print(account.getAno());
+				System.out.print("              ");
+				
+				System.out.print(account.getOwner());
+				System.out.print("               ");
+				
+				System.out.print(account.getBalance());
+				System.out.println("               ");
+			}//if문종료
+		}//for문 종료
+}
+}

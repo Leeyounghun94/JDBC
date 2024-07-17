@@ -1,0 +1,21 @@
+package com.jdbc.www.dto;
+
+import java.sql.Date;
+
+public class MemberDTO {
+// mno, mid, mpw, mdate
+	
+	//필드
+	
+	private int mno;
+	private String mid;
+	private String mpw;
+	private Date mdate;
+	
+	
+	
+	//생성자
+	
+	
+	//메서드
+}

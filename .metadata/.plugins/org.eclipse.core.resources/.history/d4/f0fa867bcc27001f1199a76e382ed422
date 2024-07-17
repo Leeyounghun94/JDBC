@@ -1,0 +1,39 @@
+package chap04;
+
+public class SwitchExam6 {
+
+	public static void main(String[] args) {
+		// 자바마스터 실습 따라해보기 (switch문)
+		
+		char grade = 'E';
+		
+		switch (grade) {
+		case 'A' : 
+			System.out.println("매우 우수");
+			break;
+			
+		case 'B' :
+			System.out.println("우수");
+			break;
+		
+		case 'C' :
+			System.out.println("좋음");
+			break;
+		
+		case 'D' :
+			System.out.println("미약");
+			break;
+		
+		case 'E' :
+			System.out.println("분발");
+			break;
+		
+		default :
+			System.out.println("잘못 입력된 등급");
+			
+			
+		}//스위치문 종료
+
+	}//메서드문 종료
+
+}//클래스문 종료

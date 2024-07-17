@@ -1,0 +1,39 @@
+package com.jdbc.www.service;
+
+import java.util.Scanner;
+
+public class MemberService {
+
+	public void memberMenu(Scanner scanner) {
+		
+		System.out.println("회원관리용 서비스로 진입");
+		boolean i = true;
+		
+		System.out.println("1.회원과입  2.로그인  3.회원수정  4.회원정보 삭제  5.종료");
+		System.out.print(">>>");
+		int i = scanner.nextInt();
+		
+		switch (i) {
+		
+		case 1 :
+			join();
+			break;
+			
+		case 2 :
+			login();
+			break;
+			
+		case 3 :
+			modify();
+			break;
+			
+		case 4 :
+			delete();
+			break;	
+			
+		case 5 :
+			i=false;
+		}
+	
+	}
+}

@@ -1,0 +1,20 @@
+package chap04;
+
+public class ForExam1 {
+
+	public static void main(String[] args) {
+		// 반복문 for문 복습하기.
+		
+
+		int sum = 0;
+		sum = sum +1 ;
+		sum = sum +1 ;
+		sum = sum +1 ;
+		sum = sum +1 ;
+		sum = sum +1 ;
+		System.out.println("1 ~ 5까지의 합 : " + sum);
+		
+		
+	}
+
+}
