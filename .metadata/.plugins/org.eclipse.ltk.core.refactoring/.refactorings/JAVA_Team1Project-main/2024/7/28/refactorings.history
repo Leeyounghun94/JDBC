@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move element &apos;asdf.java&apos; to &apos;chap01/src/chap13&apos;&#x0D;&#x0A;- Original project: &apos;JAVA_Team1Project-main&apos;&#x0D;&#x0A;- Destination element: &apos;chap01/src/chap13&apos;&#x0D;&#x0A;- Original element: &apos;com.show.DTO.asdf.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=chap01/src&lt;chap13" element1="/&lt;com.show.DTO{asdf.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1720425130016" units="1" version="1.0"/>
-</session>
