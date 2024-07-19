@@ -1,7 +1,6 @@
 package com.board.www.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,29 +54,34 @@ public class MemberDAO {
 	
 	
 
-	public  MemberDTO login(Connection connection, MemberDTO loginMemberDTO) {
+	public MemberDTO login(Connection connection, MemberDTO loginMemberDTO, MemberDTO loginMember) {
 		// connection -> main에서 넘어온 jdbc 1,2단계
 
 		MemberDTO loginDTO = new MemberDTO(); //리턴용 빈 객체
-		
+		//System.out.println(loginMemberDTO.getMid());
 		
 		try {
-			String sql = "select * from member where mid=? and mpw=?";
+			String sql = "select mno, mid, mpw, mdate from member where mid=? and mpw=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1,loginMemberDTO.getMid()); //서비스에서 받은 id가 ?에 들어감.
 			preparedStatement.setString(2,loginMemberDTO.getMpw()); //서비스에서 받은 pw가 다음 ? 에 들어감.
 
 			ResultSet resultSet = preparedStatement.executeQuery(); //위에서 만든 쿼리문 실행하고 결과를 resultSet 표로 받는다.
 
+			//System.out.println(resultSet.next());
+//			System.out.println(resultSet.getString("mid"));
 			while (resultSet.next()) {
-				loginDTO.setMno(resultSet.getInt("mno"));
-				loginDTO.setMid(resultSet.getString("mid"));
-				loginDTO.setMpw(resultSet.getString("mpw"));
-				loginDTO.setMdate(resultSet.getDate("mdate"));
-				// resultSet 표에 있는 정보를 MemberDTO 객체에 넣는다.
+					//System.out.println(resultSet.getString("mid"));
+					loginDTO.setMno(resultSet.getInt("mno"));
+					loginDTO.setMid(resultSet.getString("mid"));
+					loginDTO.setMpw(resultSet.getString("mpw"));
+					loginDTO.setMdate(resultSet.getDate("mdate"));
+					// resultSet 표에 있는 정보를 MemberDTO 객체에 넣는다.
+					System.out.println(loginDTO.getMid() + " 님 환영합니다. ");
+					
 
-			}
-
+				} 
+			
 			resultSet.close();
 			preparedStatement.close();
 			
@@ -87,8 +91,10 @@ public class MemberDAO {
 			System.out.println("id와 pw가 없습니다. ");
 			System.out.println("sql 확인하시길 바랍니다.");
 			System.out.println("다시 한번 확인 해주세요.");
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
+		//System.out.println(loginDTO.getMid());
+		//System.out.println(loginMember.getMid());
 		return loginDTO;
 
 	}

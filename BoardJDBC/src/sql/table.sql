@@ -51,7 +51,7 @@ insert into member (mno, mid, mpw, mdate) values (board_seq.nextval, 'member2','
 insert into member (mno, mid, mpw, mdate) values (board_seq.nextval, 'member3','1234', sysdate );
 insert into member (mno, mid, mpw, mdate) values (board_seq.nextval, 'member4','1234', sysdate );
 
-select * from member;
+
 
 --Member 회원가입
 
@@ -71,3 +71,5 @@ select * from member;
 delete from member where mid = '조용재';
 delete from member where mid = '멤버7';
 update member set mid = '3' where mid = '1';
+
+select * from member where mid='이영훈2' and mpw='1234';

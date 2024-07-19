@@ -22,7 +22,7 @@ public class BoardMain {
 			
 		
 		try {
-			Class.forName("oracle.jdbc.OracleDriver");
+			Class.forName("oracle.jdbc.driver.OracleDriver");
 			connection = DriverManager.getConnection("jdbc:oracle:thin:@192.168.111.103:1521:orcl", "boardtest", "boardtest");
 			
 			
@@ -60,14 +60,14 @@ public class BoardMain {
 					System.out.println("회원용 서비스로 진입합니다.");
 					MemberService memberService = new MemberService();
 					loginMember = memberService.memberMenu(scanner, loginMember, connection);
-					System.out.println(loginMember.getMid() + "님 환영합니다. ^_^");
-					//회원 서비스에서 나올 때 로그인 정보가 유지되어야 함.
+					System.out.println(loginMember.getMid() + "님 환영합니다.(●'◡'●)");
+							 	//회원 서비스에서 나올 때 로그인 정보가 유지되어야 함.
 					break;
 
 				case 2:
 					System.out.println("게시판 서비스로 진입합니다.");
 					BoardService boardService = new BoardService();
-					boardService.list(connection);
+					boardService.boardMenu(scanner, connection, loginMember);
 					break;
 
 				case 3:

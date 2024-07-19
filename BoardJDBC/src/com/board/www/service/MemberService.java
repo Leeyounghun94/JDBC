@@ -13,7 +13,7 @@ public class MemberService {
 		boolean memberRun = true;
 		
 		while (memberRun) {
-			System.out.println("1.회원가입  2.로그인  3.회원수정  4.회원정보 삭제  5.종료");
+			System.out.println("1.회원가입  2.로그인  3.회원수정  4.회원정보 삭제  5.메인화면 돌아가기");
 			System.out.print(">>>");
 			int memberSelect = scanner.nextInt();
 			switch (memberSelect) {
@@ -35,7 +35,8 @@ public class MemberService {
 				break;
 
 			case 5:
-				System.out.println(" 종료 ");
+				System.out.println(" 메인화면으로 돌아갑니다. ");
+				memberRun = false;
 			}//스위치 종료문
 		}
 		return loginMember;
@@ -87,8 +88,10 @@ public class MemberService {
 		MemberDTO loginMemberDTO = new MemberDTO(loginId,loginPw);
 		
 		MemberDAO memberDAO = new MemberDAO();
+		loginMember = memberDAO.login(connection,loginMemberDTO, loginMember);
+		System.out.println(loginMember.getMid());
 		
-		return memberDAO.login(connection,loginMemberDTO);
+		return loginMember;
 		
 	}
 
